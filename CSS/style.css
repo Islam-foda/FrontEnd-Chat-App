@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+:root{
+    --grad-1:hsl(293, 100%, 63%);
+    --grad-2:hsl(264, 100%, 61%);
+    --app-backgrnd: hsl(270, 20%, 96%);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    position: relative;
+    /* background-color: #fafafa; */
+    background-color: hsl(0, 0%, 100%);
+    min-width: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+body::before{
+    position: absolute;
+    background-image: linear-gradient(0deg, var(--grad-1), var(--grad-2));
+    width: 35%;
+    height: 90%;
+    left: -80px;
+    content: '';
+    z-index: -1;
+    border-bottom-left-radius: 350px;
+    border-bottom-right-radius: 350px;
+}
+
+body::after{
+    position: absolute;
+    background-image: linear-gradient(0deg, #f7f5fa,#faf5fb);
+    width: 35%;
+    height: 90%;
+    right: -140px;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+    border-top-left-radius: 350px;
+    border-top-right-radius: 350px;
+}
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    height: 600px;
+}
+
+.container .text{
+    flex-basis: 50%;
+    padding: 70px 0;
+    line-height: 1.5;
+}
+.container .text h1{
+    margin-bottom: 20px;
+    color: hsl(271, 36%, 24%);
+    font-weight: 700;
+}
+.container .text p{
+    line-height: 1.5;
+    color: hsl(270, 7%, 64%);
+    font-weight: 400;
+}
+.mobile-screen{
+    position: relative;
+    border: 15px solid white;
+    border-radius: 40px;
+    flex-basis: 400px;
+    overflow: hidden;
+    background-color: var(--app-backgrnd);
+    box-shadow: 6px 10px 40px -20px;
+}
+.mobile-screen .white{
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    background-color: white;
+    height: 30px;
+    border-radius: 20px;
+    z-index: 2;
+}
+.header{
+     background-image: linear-gradient(45deg, var(--grad-2), var(--grad-1));
+     border-radius: 10px;
+     padding: 5px;
+}
+
+
+.header .contact{
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    margin: 10px 0 0;
+}
+.header .contact img{
+    width: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.header .contact .person{
+    margin-right: 50px;
+    font-size: smaller;
+}
+.header .contact .person span{
+    font-size: smaller;
+    color: hsl(270, 7%, 64%);
+}
+.box{
+    font-size: small;
+    padding: 10px;
+    border-radius: 15px;
+    
+    max-width: 70%;
+}
+.left{
+    color: hsl(276, 55%, 52%);
+    background-color: hsla(206, 7%, 79%, 0.493);
+    margin: 10px;
+    border-bottom-left-radius: 5px;
+}
+.right{
+    color: hsl(271, 15%, 43%);
+    background-color: white;
+    margin:10px 10px 10px 110px;
+    border-bottom-right-radius: 5px;
+    box-shadow: #d1d1d1 0px 0px 6px 1px;
+  }
+.chat .pic-box{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.chat .pic-box img{
+    width: 50px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.aud{
+    background-image: linear-gradient(45deg,var(--grad-1),var(--grad-2));
+    max-width: 80%;
+    margin: 10px;
+    color: white;
+    font-size: small;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.aud p::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid hsl(289, 100%, 72%);
+    border-radius: 50%;
+    left: 10px;
+}
+.aud p{
+    margin-left: 15px;
+    display: inline;
+}
+.aud span{
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 16px;
+}
+form{
+    padding: 20px 0;
+}
